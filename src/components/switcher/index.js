@@ -17,8 +17,8 @@ const componentSetting = {
 		ngTrueValue: '<?',
 		ngFalseValue: '<?',
 		ngDisabled: '<?',
-		openText: '@?',
-		closeText: '@?'
+		textOn: '@?openText',
+		textOff: '@?closeText'
 	},
 	require: {
 		ngModelController: '?ngModel'

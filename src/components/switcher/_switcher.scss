@@ -5,6 +5,7 @@
   color: #FFFFFF;
   border-radius: 0.835em;
   cursor: pointer;
+  transition: all .5s ease-in-out;
 }
 
 .switcher::after {
@@ -24,13 +25,11 @@
 .on {
   padding-right: 28px;
   background-color: #47cf5f;
-  transition: all .5s ease-in-out;
 }
 
 .off {
   padding-left: 28px;
   background-color: #c2c2c2;
-  transition: all .5s ease-in-out;
 }
 
 .switcher.on::after {
