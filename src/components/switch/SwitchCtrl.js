@@ -25,6 +25,7 @@ export default class SwitchButtonController {
 	get _state() {
 		return this.ngModel === this.ngTrueValue;
 	}
+
 	get _width() {
 		let openTextWidth = (this.openText.replace(/[\u4e00-\u9fa5]/g, '**')).length;
 		let closeTextWidth = (this.closeText.replace(/[\u4e00-\u9fa5]/g, '**')).length;
