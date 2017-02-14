@@ -14,6 +14,7 @@
 		.controller('ctrl', function ($scope) {
 
 			$scope.demo1 = false;
+			$scope.demo2Disabled = false;
 		});
 
 })(window.angular);

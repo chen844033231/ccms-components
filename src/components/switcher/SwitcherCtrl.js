@@ -14,8 +14,8 @@ export default class SwitcherController {
 	 * controller init method, init values
 	 */
 	$onInit() {
-		this.trueValue = this.ngModelController ? (typeof this.trueValue === 'undefined' ? true : this.trueValue) : true;
-		this.falseValue = this.ngModelController ? (typeof this.falseValue === 'undefined' ? false : this.falseValue) : false;
+		this.valueOn = this.ngModelController ? (typeof this.valueOn === 'undefined' ? true : this.valueOn) : true;
+		this.valueOff = this.ngModelController ? (typeof this.valueOff === 'undefined' ? false : this.valueOff) : false;
 		this.textOn = typeof this.textOn === 'undefined' ? DEFAULT_OPTIONS.textOn : this.textOn;
 		this.textOff = typeof this.textOff === 'undefined' ? DEFAULT_OPTIONS.textOff : this.textOff;
 		this.opened = true;
@@ -26,18 +26,18 @@ export default class SwitcherController {
 	/**
 	 * @name updateNgModel
 	 * @param {boolean} state
-	 * update ng-model value
 	 */
 	updateNgModel(state) {
-		this.ngModelController.$setViewValue(state ? this.trueValue : this.falseValue); // change model value & $setViewValue method will trigger method binding on model
+		this.ngModelController.$setViewValue(state ? this.valueOn : this.valueOff); // change model value & $setViewValue method will trigger method binding on model
 	}
 
 	/**
 	 * @name changeStatus
-	 * change the status of opened
 	 */
 	changeStatus() {
-		this.opened = !this.opened;
-		this.text = this.opened ? this.textOn : this.textOff;
+		if (!this.disable) {
+			this.opened = !this.opened;
+			this.text = this.opened ? this.textOn : this.textOff;
+		}
 	}
 }
