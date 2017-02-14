@@ -14,8 +14,8 @@ const componentSetting = {
 	template,
 	bindings: {
 		ngModel: '<',
-		ngTrueValue: '<?',
-		ngFalseValue: '<?',
+		trueValue: '<?ngTrueValue',
+		falseValue: '<?ngFalseValue',
 		ngDisabled: '<?',
 		textOn: '@?openText',
 		textOff: '@?closeText'
